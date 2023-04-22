@@ -15,6 +15,7 @@ const io = new Server(server,{
 })
 
 io.on('connection',(socket)=>{
+    console.log('connected '+socket.id)
     socket.on("join_room",(roomId)=>{
         socket.join(roomId)
     })
